@@ -15,6 +15,15 @@ many other ORMs, refer to the process of adding sample data to the database as
 built-in features that make it easy to seed data in an Active Record
 application.
 
+This lesson is set up as a code-along, so make sure to fork and clone the
+lesson. Then run these commands to set up the dependencies and set up the
+database:
+
+```sh
+bundle install
+bundle exec rake db:migrate
+```
+
 In this application, we have a migration for one table, `games`:
 
 ```rb
@@ -39,15 +48,6 @@ And a corresponding `Game` class that inherits from Active Record:
 class Game < ActiveRecord::Base
 
 end
-```
-
-This lesson is set up as a code-along, so make sure to fork and clone the
-lesson. Then run these commands to set up the dependencies and set up the
-database:
-
-```sh
-bundle install
-bundle exec rake db:migrate
 ```
 
 ## Why Do We Need Seed Data?
