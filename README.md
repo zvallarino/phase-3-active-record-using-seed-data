@@ -19,9 +19,9 @@ This lesson is set up as a code-along, so make sure to fork and clone the
 lesson. Then run these commands to set up the dependencies and set up the
 database:
 
-```sh
-bundle install
-bundle exec rake db:migrate
+```console
+$ bundle install
+$ bundle exec rake db:migrate
 ```
 
 In this application, we have a migration for one table, `games`:
@@ -110,15 +110,15 @@ To run this code, you could run `ruby db/seeds.rb`. But since this is a very
 common operation, we can also use a Rake task to run the code in this file. Run
 the Rake task now:
 
-```sh
-bundle exec rake db:seed
+```console
+$ bundle exec rake db:seed
 ```
 
 As long as there aren't any error messages, you won't see any output in the
 terminal. We can check if the operation succeeded by entering into the console:
 
-```sh
-bundle exec rake console
+```console
+$ bundle exec rake console
 ```
 
 And checking if the records were created:
@@ -148,9 +148,9 @@ Game.create(title: "Candy Crush Saga", platform: "Mobile", genre: "Puzzle", pric
 
 And running the seed file again, then checking the data in the console:
 
-```sh
-bundle exec rake db:seed
-bundle exec rake console
+```console
+$ bundle exec rake db:seed
+$ bundle exec rake console
 ```
 
 Let's see our updated data:
@@ -174,8 +174,8 @@ Record to create new code using this file!
 
 We can use another Rake command to [replant][] the seed data:
 
-```sh
-bundle exec rake db:seed:replant
+```console
+$ bundle exec rake db:seed:replant
 ```
 
 This command removes the data from all existing tables, and then re-runs the
